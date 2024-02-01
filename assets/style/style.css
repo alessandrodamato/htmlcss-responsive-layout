@@ -125,6 +125,28 @@ main #testimonials .people:last-child{
   margin-bottom: 0;
 }
 
+/* section benefits */
+
+main #benefits{
+  padding: 60px 0 70px;
+  background-color: #9792e4;
+}
+
+main #benefits .row{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+main #benefits .row .card{
+  width: 100%;
+  height: 400px;
+  margin-bottom: 30px;
+  background-color: white;
+}
+
+main #benefits .row .card:last-child{
+  margin-bottom: 0;
+}
 
 
 
@@ -136,6 +158,7 @@ main #testimonials .people:last-child{
 
 /* media queries */
 
+/* tablet */
 @media screen and (min-width: 768px){
   main #demo .row{
     flex-direction: row;
@@ -167,8 +190,22 @@ main #testimonials .people:last-child{
   main #testimonials .people{
     height: 280px;
   }
+
+  main #benefits .row{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  main #benefits .row .card{
+    width: calc(50% - 15px);
+  }
+
+  main #benefits .row .card:nth-child(5){
+    margin-bottom: 0;
+  }
 }
 
+/* desktop */
 @media screen and (min-width: 1200px){
   .container{
     max-width: 1200px;
@@ -198,5 +235,12 @@ main #testimonials .people:last-child{
   main #planning .card#app-dev{
     height: 550px;
   }
-  
+
+  main #benefits .row .card{
+    width: calc(100% / 3 - 20px);
+  }
+
+  main #benefits .row .card:nth-child(4){
+    margin-bottom: 0;
+  }
 }
