@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* utilities */
+
+.container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.debug{
+  border: 1px dashed red;
+}
+
+.d-flex{
+  display: flex;
+}
