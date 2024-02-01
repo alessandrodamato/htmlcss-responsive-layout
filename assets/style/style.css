@@ -158,6 +158,15 @@ main #testimonials .people:last-child{
   main #demo .card:nth-child(n+3){
     height: 440px;
   }
+
+  main #planning .card{
+    height: 1000px;
+  }
+
+  main #testimonials .text,
+  main #testimonials .people{
+    height: 280px;
+  }
 }
 
 @media screen and (min-width: 1200px){
