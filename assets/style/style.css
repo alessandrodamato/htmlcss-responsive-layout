@@ -54,12 +54,9 @@ main{
 
 main .row{
   width: 100%;
+  padding: 50px 0 80px;
   flex-direction: column;
   flex-wrap: wrap;
-}
-
-main .col{
-  width: 100%;
 }
 
 main #demo .card{
@@ -69,15 +66,9 @@ main #demo .card{
   background-color: #b5ddff;
 }
 
-main #demo .big-col > .card{
+main #demo .card.big-card{
   height: 600px;
-  margin-top: 50px;
 }
-
-main #demo .col:last-child .card{
-  margin-bottom: 80px;
-}
-
 
 
 
@@ -93,47 +84,33 @@ main #demo .col:last-child .card{
 @media screen and (min-width: 768px){
   main .row{
     flex-direction: row;
-  }
-  
-  main .col{
-    width: calc(100% / 3);
+    justify-content: space-between;
+    padding-bottom: 100px;
   }
 
-  main .col.big-col{
-    width: calc(100% * 2 / 3);
-    padding-right: 10px;
+  main #demo .card{
+    width: calc(100% / 3 - 20px);
   }
 
-  main #demo .row .col:nth-child(2){
-    padding-left: 10px;
+  main #demo .card.big-card{
+    width: calc(100% / 3 * 2 - 10px);
   }
 
-  main #demo .row .col:nth-child(2) > .card{
+  main #demo .card:nth-child(2){
     height: 600px;
-    margin-top: 50px;
   }
 
-  main #demo .row .col:nth-child(n+3) .card{
-    height: 450px;
-    margin-bottom: 100px;
-  }
-
-  main #demo .row .col:nth-child(3){
-    padding-right: 10px;
-  }
-
-  main #demo .row .col:nth-child(4){
-    
-  }
-
-  main #demo .row .col:nth-child(5){
-    padding-left: 10px;
+  main #demo .card:nth-child(n+3){
+    height: 440px;
   }
 }
 
 @media screen and (min-width: 1200px){
   .container{
     max-width: 1200px;
-    padding: 0;
+  }
+
+  main #demo .row .card{
+    height: 350px;
   }
 }
