@@ -24,6 +24,10 @@ body{
   display: flex;
 }
 
+.t-center{
+  text-align: center;
+}
+
 /* header */
 
 header{
@@ -170,6 +174,25 @@ main #about-us .image{
   height: 430px;
 }
 
+/* section get-started */
+
+main #get-started{
+  padding: 60px 0;
+  background-color: #9792e4;
+}
+
+main #get-started .container{
+  width: 100%;
+  height: 600px;
+}
+
+/* footer */
+
+footer{
+  height: 230px;
+  padding: 40px 0;
+  background-color: #333333;
+}
 
 
 
@@ -244,6 +267,16 @@ main #about-us .image{
   main #about-us .image{
     width: 35%;
     height: 520px;
+  }
+
+  main #get-started .container{
+    max-width: 600px;
+    padding: 0;
+  }
+
+  footer .container{
+    max-width: 410px;
+    padding: 0;
   }
 }
 
