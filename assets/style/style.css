@@ -3,6 +3,7 @@
   --lightblue: #b5ddff;
   --violet: #9792e4;
   --darkgrey: #333333;
+  --lightgrey:#5a6e7f;
 }
 
 *{
@@ -13,6 +14,14 @@
 
 body{
   font-family: 'PT Sans', sans-serif;
+}
+
+img{
+  width: 100%;
+}
+
+h3{
+  font-size: 1.5rem;
 }
 
 /* utilities */
@@ -43,11 +52,33 @@ body{
   text-align: center;
 }
 
+.mb-30{
+  margin-bottom: 30px;
+}
+
+.mb-40{
+  margin-bottom: 40px;
+}
+
 .btn{
-  background-color: white;
+  display: inline-block;
   padding: 7px 15px;
-  border-radius: 20px;
   transition: .3s;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: white;
+  color: black;
+}
+
+.btn.btn-big{
+  padding: 10px 50px;
+  letter-spacing: .2rem;
+  font-weight: bold;
+}
+
+.btn.btn-blue{
+  background-color: var(--blue);
+  color: white;
 }
 
 .btn:hover{
@@ -95,13 +126,51 @@ main #demo .row{
 
 main #demo .card{
   width: 100%;
-  height: 350px;
   margin-bottom: 30px;
+  padding: 30px 25px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
   background-color: var(--lightblue);
 }
 
 main #demo .card.big-card{
-  height: 600px;
+  height: 650px;
+  padding-top: 40px;
+}
+
+main #demo .card.big-card h3{
+  text-align: left;
+}
+
+main #demo .card h3{
+  color: var(--blue);
+  text-align: center;
+}
+
+main #demo .card p{
+  margin-bottom: 40px;
+  line-height: 27px;
+  font-weight: bold;
+  color: var(--lightgrey)
+}
+
+main #demo .card .icon i{
+  color: var(--blue);
+  font-size: 5rem;
+}
+
+main #demo .card.big-card .image{
+  width: 250px;
+  height: 275px;
+  overflow: hidden;
+}
+
+main #demo .card.big-card .image img{
+  width: 250px;
+  height: 275px;
+  object-fit: cover;
 }
 
 /* section planning */
@@ -222,17 +291,14 @@ footer{
   background-color: var(--darkgrey);
 }
 
-
-
-
-
-
-
-
 /* media queries */
 
 /* tablet */
 @media screen and (min-width: 768px){
+  .container{
+    max-width: 768px;
+  }
+  
   main #demo .row{
     flex-direction: row;
     justify-content: space-between;
@@ -245,14 +311,25 @@ footer{
 
   main #demo .card.big-card{
     width: calc(100% / 3 * 2 - 10px);
+    align-items: flex-start;
   }
 
   main #demo .card:nth-child(2){
-    height: 600px;
+    height: 650px;
   }
 
   main #demo .card:nth-child(n+3){
-    height: 440px;
+    margin-bottom: 0;
+  }
+
+  main #demo .card.big-card p{
+    text-align: left;
+  }
+
+  main #demo .card p,
+  main #demo .card.big-card .text .btn{
+    font-size: 1.1rem;
+    text-align: center;
   }
 
   main #planning .card{
@@ -352,17 +429,29 @@ footer{
   header .container .menu ul li a:hover{
     text-decoration: underline;
   }
-
-  header .container .menu ul li .btn a{
-    color: black;
-  }
-
-  header .container .menu ul li .btn a:hover{
-    text-decoration: none;
-  }
   
   main #demo .row .card{
     height: 350px;
+  }
+
+  main #demo .card.big-card{
+    flex-direction: row;
+    align-items: flex-end;
+    padding-top: 30px;
+  }
+  
+  main #demo .card.big-card .text,
+  main #demo .card.big-card .image{
+    width: 50%;
+  }
+
+  main #demo .card.big-card .text{
+    margin-bottom: 20px;
+  }
+
+  main #demo .card.big-card .image{
+    display: flex;
+    justify-content: center;
   }
 
   main #planning .container{
