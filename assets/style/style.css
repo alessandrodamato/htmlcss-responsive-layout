@@ -4,6 +4,7 @@
   --violet: #9792e4;
   --darkgrey: #333333;
   --lightgrey:#5a6e7f;
+  --lightlightgrey:#737373;
 }
 
 *{
@@ -317,6 +318,12 @@ main #benefits{
   background-color: var(--violet);
 }
 
+main #benefits h2.section-title{
+  margin-bottom: 75px;
+  font-size: 2.2rem;
+  color: white;
+}
+
 main #benefits .row{
   flex-direction: column;
   flex-wrap: wrap;
@@ -326,11 +333,26 @@ main #benefits .row .card{
   width: 100%;
   height: 400px;
   margin-bottom: 30px;
+  padding: 45px 30px 30px;
+  border-radius: 20px;
   background-color: white;
 }
 
 main #benefits .row .card:last-child{
   margin-bottom: 0;
+}
+
+main #benefits h2.card-number{
+  font-size: 3rem;
+  color: var(--violet);
+}
+
+main #benefits h3.card-title{
+  color: var(--violet);
+}
+
+main #benefits p{
+  color: var(--lightlightgrey);
 }
 
 /* section about-us */
@@ -346,13 +368,47 @@ main #about-us .container{
 
 main #about-us .text{
   width: 100%;
-  height: 950px;
   margin-bottom: 50px;
 }
 
-main #about-us .image{
+main #about-us .text h2{
+  font-size: 3rem;
+  color: var(--violet);
+}
+
+main #about-us .text p{
+  line-height: 40px;
+  font-size: 1.1rem;
+}
+
+main #about-us .image-card{
   width: 100%;
-  height: 430px;
+}
+
+main #about-us .image-card img{
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+main #about-us .image-card .image{
+  width: 180px;
+  height: 180px;
+  position: relative;
+}
+
+main #about-us .image-card .image span{
+  position: absolute;
+  top: 0;
+  left: 75%;
+  font-size: 4rem;
+  color: var(--violet);
+}
+
+main #about-us .image-card h2{
+  font-size: 1.8rem;
+  color: var(--violet);
 }
 
 /* section get-started */
@@ -433,6 +489,10 @@ footer{
     margin: 0 30px 0 10px;
   }
 
+  main #benefits h2.section-title{
+    font-size: 3rem;
+  }
+
   main #benefits .row{
     flex-direction: row;
     justify-content: space-between;
@@ -446,6 +506,10 @@ footer{
     margin-bottom: 0;
   }
 
+  main #benefits h2.card-number{
+    font-size: 4rem;
+  }
+
   main #about-us{
     padding: 90px 0 150px;
   }
@@ -457,13 +521,28 @@ footer{
   }
 
   main #about-us .text{
-    width: 60%;
+    width: 55%;
     margin-bottom: 0;
   }
 
-  main #about-us .image{
-    width: 35%;
+  main #about-us .text h2{
+    font-size: 4rem;
+    color: var(--violet);
+  }
+
+  main #about-us .image-card{
+    width: 38%;
     height: 520px;
+  }
+
+  main #about-us .image-card img{
+    width: 240px;
+    height: 240px;
+  }
+  
+  main #about-us .image-card .image{
+    width: 240px;
+    height: 240px;
   }
 
   main #get-started .container{
@@ -584,5 +663,17 @@ footer{
 
   main #about-us .container{
     padding: 0 80px;
+  }
+
+  main #about-us .text{
+    width: 65%;
+  }
+  
+  main #about-us .image-card{
+    width: 23%;
+  }
+
+  main #about-us .text p{
+    font-size: 1.2rem;
   }
 }
