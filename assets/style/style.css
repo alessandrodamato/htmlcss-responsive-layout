@@ -465,9 +465,13 @@ main #get-started .copyright a:hover{
 /* footer */
 
 footer{
-  height: 230px;
   padding: 40px 0;
   background-color: var(--darkgrey);
+  color: white;
+}
+
+footer a{
+  color: var(--violet);
 }
 
 /* media queries */
