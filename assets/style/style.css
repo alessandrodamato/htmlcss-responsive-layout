@@ -43,6 +43,18 @@ body{
   text-align: center;
 }
 
+.btn{
+  background-color: white;
+  padding: 7px 15px;
+  border-radius: 20px;
+  transition: .3s;
+}
+
+.btn:hover{
+  box-shadow: 0 0 7px grey;
+  border-radius: 15px;
+}
+
 /* header */
 
 header{
@@ -51,7 +63,7 @@ header{
   position: fixed;
   z-index: 999;
   color: white;
-  background-color: #0084fd;
+  background-color: var(--blue);
 }
 
 header .container{
@@ -63,6 +75,7 @@ header .container .logo,
 header .container .h-menu{
   height: 100%;
   align-items: center;
+  font-size: 30px;
 }
 
 /* main */
@@ -84,7 +97,7 @@ main #demo .card{
   width: 100%;
   height: 350px;
   margin-bottom: 30px;
-  background-color: #b5ddff;
+  background-color: var(--lightblue);
 }
 
 main #demo .card.big-card{
@@ -95,7 +108,7 @@ main #demo .card.big-card{
 
 main #planning{
   padding: 60px 0;
-  background-color: #9792e4;
+  background-color: var(--violet);
 }
 
 main #planning .container{
@@ -137,7 +150,7 @@ main #testimonials .text{
 
 main #testimonials .people{
   margin-bottom: 30px;
-  background-color: #9792e4;
+  background-color: var(--violet);
 }
 
 main #testimonials .people:last-child{
@@ -148,7 +161,7 @@ main #testimonials .people:last-child{
 
 main #benefits{
   padding: 60px 0 70px;
-  background-color: #9792e4;
+  background-color: var(--violet);
 }
 
 main #benefits .row{
@@ -193,7 +206,7 @@ main #about-us .image{
 
 main #get-started{
   padding: 60px 0;
-  background-color: #9792e4;
+  background-color: var(--violet);
 }
 
 main #get-started .container{
@@ -206,7 +219,7 @@ main #get-started .container{
 footer{
   height: 230px;
   padding: 40px 0;
-  background-color: #333333;
+  background-color: var(--darkgrey);
 }
 
 
@@ -318,6 +331,36 @@ footer{
     align-items: center;
   }
 
+  header .container .menu ul{
+    height: 100%;
+    list-style: none;
+  }
+
+  header .container .menu ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+
+  header .container .menu ul li a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  header .container .menu ul li a:hover{
+    text-decoration: underline;
+  }
+
+  header .container .menu ul li .btn a{
+    color: black;
+  }
+
+  header .container .menu ul li .btn a:hover{
+    text-decoration: none;
+  }
+  
   main #demo .row .card{
     height: 350px;
   }
