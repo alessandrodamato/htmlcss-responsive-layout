@@ -24,6 +24,14 @@ body{
   display: flex;
 }
 
+.d-none{
+  display: none;
+}
+
+.d-block{
+  display: block;
+}
+
 .t-center{
   text-align: center;
 }
@@ -45,7 +53,7 @@ header .container{
 }
 
 header .container .logo,
-header .container .menu{
+header .container .h-menu{
   height: 100%;
   align-items: center;
 }
@@ -284,6 +292,23 @@ footer{
 @media screen and (min-width: 1200px){
   .container{
     max-width: 1200px;
+  }
+
+  .d-xl-none{
+    display: none;
+  }
+
+  .d-xl-block{
+    display: block;
+  }
+
+  .d-xl-flex{
+    display: flex;
+  }
+
+  header .container .menu{
+    height: 100%;
+    align-items: center;
   }
 
   main #demo .row .card{
